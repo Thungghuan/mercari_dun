@@ -1,23 +1,11 @@
-from flask import Flask, send_from_directory
-from mercari import Mercari
+from flask import Flask
 
-app = Flask('mercari_dun')
-mercari_api = Mercari()
+app = Flask(__name__)
 
-@app.route("/")
-def root():
-    return send_from_directory('web/', 'index.html')
+@app.route('/')
+def home():
+    return 'Hello, World!'
 
-@app.route("/index.js")
-def root_js():
-    return send_from_directory('web/', 'index.js')
-
-@app.route("/index.css")
-def root_css():
-    return send_from_directory('web/', 'index.css')
-
-@app.route("/search/<keyword>")
-def search(keyword=None):
-    return mercari_api.search(keyword=keyword)
-
-# app.run('0.0.0.0', 6789, debug=False)
+@app.route('/about')
+def about():
+    return 'About'
