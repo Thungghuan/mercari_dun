@@ -1,11 +1,13 @@
+let intervalID = -1
+
 function startDun() {
   console.log('开始蹲...')
 
   run()
 
   const duration = +document.querySelector('.duration-input').value
-
-  setInterval(run, duration * 1000)
+  clearInterval(intervalID)
+  intervalID = setInterval(run, duration * 1000)
 }
 
 function run() {
