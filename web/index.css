@@ -1,0 +1,40 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item-wrapper {
+  width: 600px;
+  height: 200px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.image-wrapper {
+  width: 200px;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+}
+
+.thumbnail {
+  width: 180px;
+  height: 180px;
+}
+
+.text-wrapper {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.price {
+  font-size: 20px;
+  color: red;
+}
+
+.sold {
+  color: gray;
+  text-decoration: line-through;
+}
