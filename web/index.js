@@ -1,3 +1,4 @@
+const dqList = ['231525982']
 let intervalID = -1
 
 function startDun() {
@@ -45,7 +46,7 @@ function update_item(item) {
     <div class="text-wrapper">
       <div class="price${item.buyer === '' ? '' : ' sold'}">${item.price} => ${item.price * (item.price > 2000 ? 0.056 : 0.0565)}</div>
       <a class="link" href="https://jp.mercari.com/item/${item.id}" target="_blank">https://jp.mercari.com/item/${item.id}</a>
-      <div class="buyer">buyer: ${item.buyer}</div>
+      <div class="buyer${dqList.includes(item.buyer) ? ' green' : ''}">buyer: ${item.buyer}</div>
     </div>
   `
   document.querySelector('.wrapper').appendChild(item_el)
