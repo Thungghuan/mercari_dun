@@ -1,5 +1,6 @@
 from flask import Flask, send_from_directory
 from api.mercari import Mercari
+import urllib.parse
 
 app = Flask('mercari_dun')
 mercari_api = Mercari()
@@ -18,6 +19,7 @@ def root_css():
 
 @app.route("/search/<keyword>")
 def search(keyword=None):
+    keyword = urllib.parse.unquote(keyword)
     print(keyword)
     return mercari_api.search(keyword=keyword)
 
