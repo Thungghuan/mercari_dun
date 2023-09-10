@@ -20,4 +20,4 @@ def root_css():
 def search(keyword=None):
     return mercari_api.search(keyword=keyword)
 
-app.run('0.0.0.0', 6789, debug=True)
+# app.run('0.0.0.0', 6789, debug=True)
