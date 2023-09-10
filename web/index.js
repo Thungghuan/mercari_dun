@@ -3,7 +3,9 @@ function startDun() {
 
   run()
 
-  setInterval(run, 5000)
+  const duration = +document.querySelector('.duration-input').value
+
+  setInterval(run, duration * 1000)
 }
 
 function run() {
