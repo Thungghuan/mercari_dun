@@ -1,6 +1,6 @@
 import json
 import requests
-from dpop import generate_DPOP
+from api.dpop import generate_DPOP
 
 class Mercari():
     def __init__(self) -> None:

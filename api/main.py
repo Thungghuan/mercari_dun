@@ -1,5 +1,5 @@
 from flask import Flask, send_from_directory
-from mercari import Mercari
+from api.mercari import Mercari
 
 app = Flask('mercari_dun')
 mercari_api = Mercari()
