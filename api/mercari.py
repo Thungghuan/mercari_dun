@@ -31,6 +31,9 @@ class Mercari():
                 "keyword": keyword,
             },
         }
+
+        print(data)
+
         data = json.dumps(data, ensure_ascii=False).encode('utf-8')
 
         resp = self.session.post(url, data)

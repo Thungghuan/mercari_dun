@@ -18,6 +18,7 @@ def root_css():
 
 @app.route("/search/<keyword>")
 def search(keyword=None):
+    print(keyword)
     return mercari_api.search(keyword=keyword)
 
 # app.run('0.0.0.0', 6789, debug=False)
